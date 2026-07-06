@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glow-bg-1"></div>
+    <div class="glow-bg-2"></div>
+
+    <header class="hero-header">
+        <div class="badge">Enterprise Stack v2.0</div>
+        <h1>Bank <span>Management System</span></h1>
+        <p>A high-performance polyglot engine architecture piping browser operations through a secure local C++ processing node.</p>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="module-card glass">
+            <div class="card-header">
+                <span class="icon">✨</span>
+                <h2>Account Provisioning</h2>
+            </div>
+            <form id="creationForm">
+                <div class="input-group">
+                    <input type="number" id="newNumber" placeholder=" " required>
+                    <label>Account Number</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="newHolder" placeholder=" " required>
+                    <label>Legal Holder Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="newBalance" placeholder=" " step="0.01" required>
+                    <label>Opening Balance ($)</label>
+                </div>
+                <div class="input-group">
+                    <select id="newType">
+                        <option value="Savings">Savings Matrix</option>
+                        <option value="Current">Current Matrix</option>
+                    </select>
+                </div>
+                <button type="submit" class="action-btn success-intent">Execute Account Protocol</button>
+            </form>
+        </section>
+
+        <section class="module-card glass">
+            <div class="card-header">
+                <span class="icon">⚡</span>
+                <h2>Operations Pipeline</h2>
+            </div>
+            <form id="ledgerForm">
+                <div class="input-group">
+                    <input type="number" id="targetNumber" placeholder=" " required>
+                    <label>Target Account Number</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="ledgerAmount" placeholder=" " step="0.01" required>
+                    <label>Transaction Amount ($)</label>
+                </div>
+                <div class="twin-buttons">
+                    <button type="button" id="depositTrigger" class="action-btn primary-intent">Post Deposit</button>
+                    <button type="button" id="withdrawTrigger" class="action-btn warning-intent">Withdrawal</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="module-card glass">
+            <div class="card-header">
+                <span class="icon">🛡️</span>
+                <h2>Admin Protocols</h2>
+            </div>
+            <div class="stacked-triggers">
+                <div class="input-group">
+                    <input type="number" id="adminTargetNumber" placeholder=" ">
+                    <label>Target Account Number</label>
+                </div>
+                <button type="button" id="inspectTrigger" class="action-btn primary-intent">Query Account Record</button>
+                <button type="button" id="listAllTrigger" class="action-btn neutral-intent">Dump Active Ledger State</button>
+                <button type="button" id="purgeTrigger" class="action-btn danger-intent">Purge System Account File</button>
+            </div>
+        </section>
+    </main>
+
+    <section class="terminal-shell glass">
+        <div class="terminal-header">
+            <div class="dots">
+                <span></span><span></span><span></span>
+            </div>
+            <h3>Runtime System Logs</h3>
+        </div>
+        <div id="terminalStream">> Operational gateway online. Awaiting system instruction inputs...</div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
